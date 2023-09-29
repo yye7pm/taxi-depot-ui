@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Book a Ride - Taxi Depot</title>
+        <link rel="stylesheet" type="text/css" href="./payment-zipcode.css">
+    </head>
+    <body>
+        
+        <script>
+            document.getElementById('submit-button').onclick = function(){
+                var messageContainer = document.getElementById('message-container')
+                messageContainer.style.display = 'block'
+
+                setTimeout(function(){
+                    messageContainer.style.display = 'none'
+                }, 150000)
+            }
+
+            function deleteAlert(){
+                alert("Your ride has been deleted!")
+            }
+
+            function bookedRide(){
+                alert("Your ride has been booked and a confirmation email will be sent.")
+            }
+        </script>
+
+        <div class="navbar">
+            <ul class="nav-items">
+                <li><a>Home</a></li>
+                <li><a href="bookride.html">Book A Ride</a></li>
+                <li><a href="prices.html">Prices</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="heading-container">
+            <h1 class="title">Taxi Depot</h1>
+            <h2 class="subheading">Better Taxis, Better Drivers, Taxi Depot</h2>
+        </div>
+
+        <h1>Please enter your zipcode</h1>
+        <form>
+            <input type="number" id="address" class="address" placeholder="zipcode">
+        </form>
+
+
+        <div class="submit-alert-button">
+            <div class="button-wrapper">
+                <button class="submit-alert" onclick="window.location.href='./payment-card.html'">Next</button>
+                <button class="back-button" onclick="window.location.href='./payment-address.html'">Back</button>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>

@@ -27,7 +27,7 @@ label, input, select {
 
 button {
     cursor: pointer;
-    background-color: #ac1f1f;
+    background-color: green;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -78,7 +78,7 @@ body {
     display: inline-block;
     padding:15px;
     text-align: center;
-    background: lightyellow;
+    background: white;
     border-radius: 10px;
     width: 33%;
     height: 600px;
@@ -130,5 +130,8 @@ body {
     margin-top: 20px;
 }
 
+h1{
+    text-align: center
+}
 
 

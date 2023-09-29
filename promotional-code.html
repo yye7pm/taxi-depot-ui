@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Book a Ride - Taxi Depot</title>
+        <link rel="stylesheet" type="text/css" href="./promotional-code.css">
+    </head>
+    <body>
+        
+        <script>
+            window.onload = function() {
+                function determinePrice() {
+                    var ride = document.getElementById('ride').value;  // Use getElementById instead of getElementsByName
+
+                    if (ride == "short") {
+                        alert("Your short ride has been booked with a base price of $20 for 25 miles. A confirmation email should be sent soon.");
+                    }
+
+                    if (ride == "medium") {
+                        alert("Your medium ride has been booked with a base price of $50 for 100 miles. A confirmation email should be sent soon.");
+                    }
+
+                    if (ride == "long") {
+                        alert("Your long ride has been booked with a base price of $100 for 100 miles. A confirmation email should be sent soon.");
+                    }
+                }
+
+                function bookedRide() {
+                    determinePrice();
+                }
+
+                document.querySelector('.submit-alert').onclick = function() {  // Changed the selector to match your HTML
+                    bookedRide();
+                };
+            };
+
+        </script>
+
+        <div class="navbar">
+            <ul class="nav-items">
+                <li><a>Home</a></li>
+                <li><a href="bookride.html">Book A Ride</a></li>
+                <li><a href="prices.html">Prices</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="heading-container">
+            <h1 class="title">Taxi Depot</h1>
+            <h2 class="subheading">Better Taxis, Better Drivers, Taxi Depot</h2>
+        </div>
+
+        <h1>Please enter a promotional code if you have one</h1>
+        <form>
+            <input type="number" id="address" clasops="address" placeholder="Promotional">
+            
+
+            <label>Select Ride Type</label>
+            <select name="ride" id="ride">
+                <option value="short">Short Ride</option>
+                <option value="long">Long Ride</option>
+                <option value="medium">Medium Ride</option>
+            </select>
+
+        </form>
+
+
+        <div class="submit-alert-button">
+            <div class="button-wrapper">
+                <button class="submit-alert" onclick="bookedRide()">Submit</button>
+                <button class="back-button" onclick="window.location.href='./payment-card.html'">Back</button>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
