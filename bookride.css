@@ -7,6 +7,10 @@
     margin-top: 10%;
 }
 
+button .show{
+    color:yellow
+}
+
 .back-button{
     text-align: center;
     margin-top: 20px;
@@ -27,7 +31,7 @@ label, input, select {
 
 button {
     cursor: pointer;
-    background-color: #ac1f1f;
+    background-color: green;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -116,7 +120,7 @@ body {
 }
 
 .submit {
-    color: red
+    color: green
 }
 
 .submit-alert{
