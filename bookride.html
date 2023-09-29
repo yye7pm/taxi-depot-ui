@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Book a Ride - Taxi Depot</title>
+        <link rel="stylesheet" type="text/css" href="./bookride.css">
+    </head>
+    <body>
+        
+        <script>
+            document.getElementById('submit-button').onclick = function(){
+                var messageContainer = document.getElementById('message-container')
+                messageContainer.style.display = 'block'
+
+                setTimeout(function(){
+                    messageContainer.style.display = 'none'
+                }, 150000)
+            }
+
+            function deleteAlert(){
+                alert("Your ride has been deleted!")
+            }
+
+            function bookedRide(){
+                alert("Your ride has been booked and a confirmation email will be sent.")
+            }
+        </script>
+
+        <div class="navbar">
+            <ul class="nav-items">
+                <li><a>Home</a></li>
+                <li><a href="bookride.html">Book A Ride</a></li>
+                <li><a href="prices.html">Prices</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="heading-container">
+            <h1 class="title">Taxi Depot</h1>
+            <h2 class="subheading">Better Taxis, Better Drivers, Taxi Depot</h2>
+        </div>
+
+        <div id="message-container" style="display:none">Your ride has been booked!</div>
+
+        <div class="drivers">
+            <div class="driver-testimonials">
+                <div class="driverCard">
+                    <img src="./hongning.jpeg">
+                    <h1>Jennifer Aguilera</h1>
+                    <p>"Driving for Taxi Depot allows me to explore parts of the city I've never seen before"</p>
+                </div>
+
+                <div class="driverCard">
+                    <img src="./turk.jpeg">
+                    <h1>Enes Olgunz</h1>
+                    <p>"At Taxi Depot, we make sure that every individual has the most comfortable ride possible, if not, money back guarantee"</p>
+                </div>
+
+                <div class="driverCard">
+                    <img src="./uber.webp">
+                    <h1>David Patel</h1>
+                    <p>"My dad worked for Taxi Depot, my grandfather worked for Taxi Depot, and now so do I and I love it."</p>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <div class="booking-container">
+            <h2>Book a Ride</h2>
+            <form id='booking-form'>
+                <input type="text" id="name" name="name" placeholder="Name" ><br>
+        
+                <input type="email" id="email" name="email" placeholder="Email" ><br>
+        
+                <input type="text" id="address" name="address" placeholder="Pick-up Address" ><br>
+        
+                <input type="text" id="destination" name="destination" placeholder="Destination" ><br>
+        
+                <input type="date" id="date" name="date" placeholder="Date" ><br>
+        
+                <input type="time" id="time" name="time" placeholder="Time" ><br>
+                
+                <input type="number" id="age" name="age" placeholder="Age" ><br>
+                
+                <label>Select Driver</label>
+                <select name="driver" id="driver">
+                    <option value="enes">Enes Olgun</option>
+                    <option value="david">David Patel</option>
+                    <option value="jennifer">Jennifer Aguilera</option>
+                </select>
+
+                <label>Select Car</label>
+                <select name="car" id="car">
+                    <option value="toyota">Toyota Camry</option>
+                    <option value="david">Audi RS6</option>
+                    <option value="jennifer">Tesla Model 3 Performance</option>
+                </select>
+
+                <button type="submit" id='submit-button' onclick="deleteAlert()">Delete</button>
+            </form>
+        </div>
+
+        <div class="back-button">
+            <a href="index.html">Not what you need? Go back!</a>
+        </div>
+
+        <div class="submit-alert-button">
+            <div class="button-wrapper">
+                <button class="submit-alert" onclick="bookedRide()">Book your ride</button>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>

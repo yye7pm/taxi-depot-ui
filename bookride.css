@@ -1,0 +1,134 @@
+.booking-container {
+    width: 50%;
+    margin: auto;
+    background: #f4f4f4;
+    padding: 30px;
+    box-shadow: 0px 0px 10px 0px #000;
+    margin-top: 10%;
+}
+
+.back-button{
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+label, input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    background-color: #ac1f1f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+html{
+    background-color: lightblue;
+}
+
+.nav-items {
+    text-align: center;
+    background-color: lightcyan;
+    width: 100%;
+    margin-top:0;
+    padding: 20px;
+}
+
+.nav-items li{
+    display:inline;
+    padding: 17px;
+}
+
+.nav-items li a:hover{
+    color: red;
+}
+
+
+.title {
+    text-align: center;
+}
+
+.subheading{
+    text-align: center;
+    font-size: 25px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
+
+.driverCard{
+    display: inline-block;
+    padding:15px;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    width: 33%;
+    height: 600px;
+}
+
+.driverCard img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.driverCard h1 {
+    padding: 20px;
+}
+
+.welcome-message{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 2%;
+    background-color: white;
+
+}
+
+.ride{
+    display: inline-block;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    width: 33%;
+}
+
+.to-center{
+    text-align: center;
+}
+
+.submit {
+    color: red
+}
+
+.submit-alert{
+    background-color: lightcoral;
+    padding :10px;
+    text-align: center;
+}
+
+.button-wrapper {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+

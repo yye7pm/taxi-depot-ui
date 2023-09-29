@@ -1,0 +1,65 @@
+.back-button{
+    text-align: center;
+}
+
+body{
+    background-image: url('../images/taxi-background-henrik-lehnerer.jpg');
+}
+
+form {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+html{
+    background-color: lightblue;
+}
+
+
+.nav-items {
+    text-align: center;
+    background-color: lightcyan;
+    width: 100%;
+    margin-top:0;
+}
+
+
+.nav-items li{
+    padding: 17px;
+}
+
+.nav-items li a:hover{
+    color: red;
+}
+
+
+.title {
+    text-align: center;
+}
+
+.subheading{
+    text-align: center;
+    font-size: 25px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
+
+
+

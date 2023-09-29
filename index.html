@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow Images</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+  </head>
+  <body>
+
+    <div class="navbar">
+        <ul class="nav-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bookride.html">Book A Ride</a></li>
+            <li><a href="prices.html">Prices</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    
+    <div class="heading-container">
+        <h1 class="title">Taxi Depot</h1>
+        <h1 class="subheading">Better Taxis, Better Drivers, Taxi Depot</h1>
+    </div>
+
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="./2019-Toyota-Camry-Driving-on-Bridge.jpg" style="width:100%">
+        <div class="text">The Best Cars</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="./pexels-ishan-kulshrestha-7126211.jpg" style="width:100%">
+        <div class="text">Superior Performance</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="./pexels-lisa-fotios-1392621.jpg" style="width:100%">
+        <div class="text">The Cleanest Interiors</div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <div class="welcome-message">
+        <h4>At Taxt Depot, we pride ourselves on offering the most reliable, convenient, and safe 
+            taxi services in your city. Our professional drivers are trained, licensed, and insured, ensuring
+            a seamless transportation experience for our passengers. Whether you are looking for a 
+            quick ride to the airport or a comfortable transport to your special event, we are just a call away!
+            Book now!
+        </h4>
+    </div>
+
+    <br>
+
+    <div class="ride-types">
+        <div class="to-center">
+            <div class="ride">
+                <h1>Short Ride</h1>
+                <p>Take a short ride under 25 miles!</p>
+                <img class='ride-image' src="./abbey-road-london.webp">
+                <p>Need a quick ride somwhere? Request a ride using Taxi-Depot's Taxi-Zoom-X to get 
+                    the best drivers to take you to your short destination.
+                </p>
+            </div>
+
+            <div class="ride">
+                <h1>Medium Ride</h1>
+                <p>Take a medium ride under 100 miles!</p>
+                <img class='ride-image' src="./istockphoto-1131362689-612x612.jpg">
+                <p>Need an longer ride? Sometimes you need to travel within your state, that's why we
+                    have created Taxi-Zoom-XX to provide you with the best drivers to take you to your short destination.
+                </p>
+            </div>
+
+            <div class="ride">
+                <h1>Long ride</h1>
+                <p>Take a ride over 100 miles! Extra fees apply</p>
+                <img class='ride-image' src='./Blank_US_Map_(states_only).svg.png'>
+                <p>Need an interstate ride? For the times you need to visit family and friends, we offer
+                    Taxi-Zoom-XL to ensure you can see your loved ones and meet business needs regardless of location.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if(n > slides.length) {
+            slideIndex = 1
+            }
+            if(n < 1) {
+            slideIndex = slides.length
+            }
+            for(i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            }
+            for(i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+  </body>
+</html>
