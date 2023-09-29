@@ -41,18 +41,22 @@
         </div>
 
         <h1>Please enter your credit card information</h1>
-        <form>
+        <form id="credit-card-form">
             <input type="text" id="address" class="address" placeholder="Billing Address" required>
-        </form>
-
-
-        <div class="submit-alert-button">
-            <div class="button-wrapper">
-                <button class="submit-alert" onclick="window.location.href='./payment-zipcode.html'">Next</button>
-                <button class="back-button" onclick="window.location.href='./bookride.html'">Back</button>
+            <div class="submit-alert-button">
+                <div class="button-wrapper">
+                    <button type="submit" class="submit-alert">Next</button>
+                    <button class="back-button" onclick="window.location.href='./bookride.html'">Back</button>
+                </div>
             </div>
-            
-        </div>
+        </form>
+        
+        <script>
+            document.getElementById('credit-card-form').addEventListener('submit', function(e) {
+                e.preventDefault();  // Prevent the form from actually submitting
+                window.location.href = './payment-zipcode.html';
+            });
+        </script>
         
     </body>
 </html>

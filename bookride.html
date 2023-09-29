@@ -8,6 +8,17 @@
     <body>
         
         <script>
+
+
+    // This function will be called when the form is submitted
+            function handleFormSubmission(event) {
+                event.preventDefault();  // Prevent the form from actually submitting
+                // ... your existing deleteAlert function or other logic ...
+            }
+
+            // Add an event listener to your form
+            document.getElementById('booking-form').addEventListener('submit', handleFormSubmission);
+
             document.getElementById('submit-button').onclick = function(){
                 var messageContainer = document.getElementById('message-container')
                 messageContainer.style.display = 'block'
@@ -103,15 +114,27 @@
         </div>
 
         <div class="back-button">
-            <a href="index.html">Not what you need? Go back!</a>
-        </div>
-
-        <div class="submit-alert-button">
-            <div class="button-wrapper">
-                <button class="submit-alert" onclick="window.location.href='./payment-address.html'">Book your ride</button>
-            </div>
-            
+        <a href="index.html">Not what you need? Go back!</a>
         </div>
         
+        <div class="submit-alert-button">
+            <div class="button-wrapper">
+                <button class="submit-alert" onclick="validateAndSubmit()">Book your ride</button>
+            </div>
+        </div>
+        
+        <script>
+            function validateAndSubmit() {
+                var form = document.getElementById('booking-form');
+                if (form.checkValidity()) {
+                    window.location.href = './payment-address.html';
+                } else {
+                    form.reportValidity();  // Show the browser's validation message
+                }
+            }
+        </script>
+        
+        
+
     </body>
 </html>

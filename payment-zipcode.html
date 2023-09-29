@@ -41,18 +41,22 @@
         </div>
 
         <h1>Please enter your zipcode</h1>
-        <form>
+        <form id="zipcode-form">
             <input type="number" id="address" class="address" placeholder="zipcode" required>
-        </form>
-
-
-        <div class="submit-alert-button">
-            <div class="button-wrapper">
-                <button class="back-button" onclick="window.location.href='./payment-address.html'">Back</button>
-                <button class="submit-alert" onclick="window.location.href='./payment-card.html'">Next</button>
+            <div class="submit-alert-button">
+                <div class="button-wrapper">
+                    <button class="back-button" onclick="window.location.href='./payment-address.html'">Back</button>
+                    <button type="submit" class="submit-alert">Next</button>
+                </div>
             </div>
-            
-        </div>
+        </form>
+        
+        <script>
+            document.getElementById('zipcode-form').addEventListener('submit', function(e) {
+                e.preventDefault();  // Prevent the form from actually submitting
+                window.location.href = './payment-card.html';
+            });
+        </script>
         
     </body>
 </html>
