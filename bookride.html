@@ -6,6 +6,31 @@
         <link rel="stylesheet" type="text/css" href="./bookride.css">
     </head>
     <body>
+
+        <style>
+            /* Additional CSS for show form button */
+            #show-form-button {
+                position: fixed;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%) translateX(-80%);
+                transition: transform 0.3s;
+                background-color: #000000; /* Blue */
+                border: 1px solid white;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+    
+            #show-form-button:hover {
+                transform: translateY(-50%) translateX(0);
+            }
+        </style>
         
         <script>
 
@@ -78,9 +103,13 @@
             </div>
         </div>
 
-        <div class="booking-container">
+        <button id="show-form-button">Show Form</button>
+
+        <div class="booking-container" style="display:none;" id="booking-container">
             <h2>Book a Ride</h2>
             <form id='booking-form'>
+                <h1>If YOU WANT A MULTI-DAY TAXI, CONTACT US <a href=contact.html>HERE</a> AND FILL OUT A SUMMARY OF THE TRIP!</h1>
+
                 <h2>Ultimate Extended Booking Details (Ensure meticulous attention to ALL sections)</h2>
                 
                 <p>Every section must be filled. Any omission or error may lead to a failed booking and further administrative processing.</p>
@@ -361,11 +390,11 @@
                 <input type="checkbox" name="confirmation-rules" required><br>
                 
                 <button type="submit" id='submit-button'>Submit</button>
-                
+                <!-- ... rest of your form content ... -->
             </form>
-            
-            
+            <!-- ... any other content in your booking-container ... -->
         </div>
+
 
         <div class="back-button">
         <a href="index.html">Not what you need? Go back!</a>
@@ -393,20 +422,49 @@
                 }
             }
 
-            // Function to display the "Hurry up" popup
-            function showPopup() {
-                document.getElementById('hurry-popup').style.display = 'block';
-            }
-
-            // Function to close the "Hurry up" popup
-            function closePopup() {
-                document.getElementById('hurry-popup').style.display = 'none';
-            }
-
-            // Display the popup every 15 seconds
-            setInterval(showPopup, 7000);
-
         </script>
+
+        
+        <script type="text/javascript">
+            document.getElementById('show-form-button').onclick = function() {
+                document.getElementById('booking-container').style.display = 'block';
+            }
+        </script>
+
+        <script type="text/javascript">
+            document.getElementById('show-form-button').onclick = function() {
+                document.getElementById('booking-container').style.display = 'block';
+            }
+        </script>
+
+        <script>
+            // This function will be called when the form is submitted
+            function handleFormSubmission(event) {
+                event.preventDefault();  // Prevent the form from actually submitting
+                // ... your existing deleteAlert function or other logic ...
+            }
+
+            // Add an event listener to your form
+            document.getElementById('booking-form').addEventListener('submit', handleFormSubmission);
+
+            document.getElementById('submit-button').onclick = function(){
+                var messageContainer = document.getElementById('message-container')
+                messageContainer.style.display = 'block'
+
+                setTimeout(function(){
+                    messageContainer.style.display = 'none'
+                }, 150000)
+            }
+
+            function deleteAlert(){
+                alert("Your ride has been deleted!")
+            }
+
+            function bookedRide(){
+                alert("Your ride has been booked and a confirmation email will be sent.")
+            }
+        </script>
+
         
         
 
