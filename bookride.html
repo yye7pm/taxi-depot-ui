@@ -81,36 +81,290 @@
         <div class="booking-container">
             <h2>Book a Ride</h2>
             <form id='booking-form'>
-                <input type="text" id="name" name="name" placeholder="Name" required ><br>
-        
-                <input type="email" id="email" name="email" placeholder="Email" required ><br>
-        
-                <input type="text" id="address" name="address" placeholder="Pick-up Address" required ><br>
-        
-                <input type="text" id="destination" name="destination" placeholder="Destination required" ><br>
-        
-                <input type="date" id="date" name="date" placeholder="Date" required><br>
-        
-                <input type="time" id="time" name="time" placeholder="Time" required ><br>
+                <h2>Ultimate Extended Booking Details (Ensure meticulous attention to ALL sections)</h2>
                 
-                <input type="number" id="age" name="age" placeholder="Age" required ><br>
+                <p>Every section must be filled. Any omission or error may lead to a failed booking and further administrative processing.</p>
                 
-                <label>Select Driver</label>
-                <select name="driver" id="driver">
+                <h3>Step 1: Comprehensive Personal Information</h3>
+                
+                <input type="text" id="title" name="title" placeholder="Title (Mr./Ms./Dr./etc.)" required><br>
+                
+                <input type="text" id="name" name="name" placeholder="Full Name including Middle Name" required><br>
+            
+                <input type="text" id="nick-name" name="nick-name" placeholder="Nickname (if any)"><br>
+                
+                <input type="text" id="mother-name" name="mother-name" placeholder="Mother's Full Maiden Name" required><br>
+                
+                <input type="text" id="father-name" name="father-name" placeholder="Father's Full Name" required><br>
+                
+                <input type="text" id="spouse-name" name="spouse-name" placeholder="Spouse's Name (if applicable)"><br>
+            
+                <input type="text" id="child1-name" name="child1-name" placeholder="First Child's Name (if applicable)"><br>
+            
+                <input type="text" id="child2-name" name="child2-name" placeholder="Second Child's Name (if applicable)"><br>
+            
+                <input type="email" id="email" name="email" placeholder="Primary Email Address" required><br>
+                
+                <input type="email" id="alternate-email" name="alternate-email" placeholder="Alternate Email Address"><br>
+            
+                <input type="tel" id="phone" name="phone" placeholder="Primary Phone Number" required><br>
+            
+                <input type="tel" id="alternate-phone" name="alternate-phone" placeholder="Alternate Phone Number"><br>
+                
+                <h3>Step 2: Address Details</h3>
+            
+                <textarea id="permanent-address" name="permanent-address" placeholder="Permanent Address" rows="4" required></textarea><br>
+            
+                <input type="text" id="address-pin" name="address-pin" placeholder="Permanent Address ZIP/PIN Code" required><br>
+                
+                <input type="text" id="address" name="address" placeholder="Complete Pick-up Address with Landmarks" required><br>
+            
+                <input type="text" id="address2-pin" name="address2-pin" placeholder="Pick-up Address ZIP/PIN Code" required><br>
+                
+                <input type="text" id="alternate-address" name="alternate-address" placeholder="Alternate Pick-up Address (if any)"><br>
+            
+                <input type="text" id="address3-pin" name="address3-pin" placeholder="Alternate Address ZIP/PIN Code"><br>
+                
+                <input type="text" id="destination" name="destination" placeholder="Complete Destination Address with any special instructions" required><br>
+            
+                <input type="text" id="destination-pin" name="destination-pin" placeholder="Destination ZIP/PIN Code" required><br>
+                
+                <input type="text" id="alternate-destination" name="alternate-destination" placeholder="Alternate Destination Address"><br>
+            
+                <input type="text" id="destination2-pin" name="destination2-pin" placeholder="Alternate Destination ZIP/PIN Code"><br>
+                
+                <h3>Step 3: Detailed Date and Time Preferences</h3>
+                
+                <input type="date" id="date" name="date" placeholder="Preferred Date" required><br>
+                
+                <input type="date" id="alternate-date" name="alternate-date" placeholder="Alternate Date (if first choice is not available)"><br>
+                
+                <input type="time" id="time" name="time" placeholder="Preferred Time" required><br>
+                
+                <input type="time" id="alternate-time" name="alternate-time" placeholder="Alternate Time (if first choice is not available)"><br>
+            
+                <input type="number" id="trip-duration" name="trip-duration" placeholder="Expected Trip Duration (in hours)" required><br>
+            
+                <h3>Step 4: Additional Complex Information</h3>
+                
+                <input type="number" id="age" name="age" placeholder="Age (Must be accurate)" required><br>
+            
+                <input type="text" id="birth-place" name="birth-place" placeholder="Place of Birth"><br>
+            
+                <input type="text" id="nationality" name="nationality" placeholder="Nationality"><br>
+            
+                <input type="text" id="occupation" name="occupation" placeholder="Occupation"><br>
+            
+                <textarea id="special-requirements" name="special-requirements" placeholder="Any Special Requirements" rows="4"></textarea><br>
+            
+                <label>Preferred Music in Car</label><br>
+                <input type="radio" name="music" value="rock"> Rock<br>
+                <input type="radio" name="music" value="pop"> Pop<br>
+                <input type="radio" name="music" value="jazz"> Jazz<br>
+                <input type="radio" name="music" value="classical"> Classical<br>
+                <input type="radio" name="music" value="none"> None<br>
+            
+                <label>Rate Your Last Trip (if applicable)</label><br>
+                <input type="range" name="rating" min="1" max="10"><br>
+            
+                <label>Enter Captcha: 1234</label><br>
+                <input type="text" name="captcha" placeholder="Enter Captcha Here" required><br>
+            
+                <h3>Step 5: Redundant Confirmations (All are mandatory)</h3>
+            
+                <label>Select Driver Preference (You can select multiple)</label><br>
+                <select name="driver" id="driver" multiple size="5">
                     <option value="enes">Enes Olgun</option>
                     <option value="david">David Patel</option>
                     <option value="jennifer">Jennifer Aguilera</option>
-                </select>
-
-                <label>Select Car</label>
-                <select name="car" id="car">
+                    <option value="amanda">Amanda Waller</option>
+                    <option value="steve">Steve Harrington</option>
+                </select><br>
+            
+                <label>Select Car Preference (Choose up to 3)</label><br>
+                <select name="car" id="car" multiple size="5">
                     <option value="toyota">Toyota Camry</option>
-                    <option value="david">Audi RS6</option>
-                    <option value="jennifer">Tesla Model 3 Performance</option>
-                </select>
+                    <option value="audi">Audi RS6</option>
+                    <option value="tesla">Tesla Model 3 Performance</option>
+                    <option value="ford">Ford F-150</option>
+                    <option value="bmw">BMW X5</option>
+                </select><br>
+            
+                <label>Additional Services (All services are chargeable)</label><br>
+                <input type="checkbox" name="service" value="water"> Bottled Water<br>
+                <input type="checkbox" name="service" value="wifi"> WiFi<br>
+                <input type="checkbox" name="service" value="charger"> Phone Charger<br>
+                <input type="checkbox" name="service" value="snacks"> Snacks<br>
+                <input type="checkbox" name="service" value="pillow"> Neck Pillow<br>
+            
+                <h3>Step 6: Detailed Preferences</h3>
 
-                <button type="submit" id='submit-button' onclick="deleteAlert()">Delete</button>
+                <label>Select Preferred Seat Material</label><br>
+                <select name="seat-material" id="seat-material">
+                    <option value="leather">Leather</option>
+                    <option value="fabric">Fabric</option>
+                    <option value="vinyl">Vinyl</option>
+                    <option value="synthetic">Synthetic</option>
+                </select><br>
+                
+                <label>Preferred Interior Car Fragrance</label><br>
+                <select name="fragrance" id="fragrance">
+                    <option value="lavender">Lavender</option>
+                    <option value="vanilla">Vanilla</option>
+                    <option value="newcar">New Car Smell</option>
+                    <option value="pine">Pine</option>
+                    <option value="ocean">Ocean Breeze</option>
+                </select><br>
+                
+                <label>Preferred Car Temperature (in Fahrenheit)</label><br>
+                <input type="number" name="temperature" min="60" max="75" step="1" value="68"><br>
+                
+                <h3>Step 7: Dietary Preferences (For Complimentary Snacks)</h3>
+                
+                <label>Any Allergies? (Please tick all that apply)</label><br>
+                <input type="checkbox" name="allergy" value="nuts"> Nuts<br>
+                <input type="checkbox" name="allergy" value="dairy"> Dairy<br>
+                <input type="checkbox" name="allergy" value="gluten"> Gluten<br>
+                <input type="checkbox" name="allergy" value="seafood"> Seafood<br>
+                <input type="checkbox" name="allergy" value="none"> None<br>
+                
+                <label>Select Preferred Beverage</label><br>
+                <select name="beverage" id="beverage">
+                    <option value="water">Water</option>
+                    <option value="soda">Soda</option>
+                    <option value="juice">Juice</option>
+                    <option value="coffee">Coffee</option>
+                    <option value="tea">Tea</option>
+                </select><br>
+                
+                <h3>Step 8: In-Car Entertainment Preferences</h3>
+
+                <label>Preferred In-Car Music Genre (Select up to three)</label><br>
+                <select name="music-genre" id="music-genre" multiple size="7">
+                    <option value="rock">Rock</option>
+                    <option value="pop">Pop</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="classical">Classical</option>
+                    <option value="country">Country</option>
+                    <option value="hiphop">Hip Hop</option>
+                    <option value="edm">Electronic Dance Music</option>
+                    <option value="rnb">R&B</option>
+                    <option value="blues">Blues</option>
+                </select><br>
+                
+                <label>Preferred In-Car Movie Genre (For longer rides)</label><br>
+                <select name="movie-genre" id="movie-genre" multiple size="6">
+                    <option value="action">Action</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                    <option value="horror">Horror</option>
+                    <option value="romantic">Romantic</option>
+                    <option value="documentary">Documentary</option>
+                </select><br>
+                
+                <label>Would you like in-car Wi-Fi?</label><br>
+                <input type="radio" name="wifi" value="yes"> Yes<br>
+                <input type="radio" name="wifi" value="no"> No<br>
+                
+                <h3>Step 9: Reading Preferences</h3>
+                
+                <label>Would you prefer a magazine or newspaper during the ride?</label><br>
+                <input type="radio" name="reading" value="magazine"> Magazine<br>
+                <input type="radio" name="reading" value="newspaper"> Newspaper<br>
+                <input type="radio" name="reading" value="none"> None<br>
+                
+                <label>If you selected 'Magazine', choose your preferred genre:</label><br>
+                <select name="magazine-genre" id="magazine-genre">
+                    <option value="fashion">Fashion</option>
+                    <option value="sports">Sports</option>
+                    <option value="technology">Technology</option>
+                    <option value="travel">Travel</option>
+                    <option value="health">Health & Fitness</option>
+                </select><br>
+                
+                <h3>Step 10: Refreshment & Meal Preferences</h3>
+
+                <label>Select your preferred beverage:</label><br>
+                <select name="beverage" id="beverage">
+                    <option value="water">Spring Water</option>
+                    <option value="sparkling-water">Sparkling Water</option>
+                    <option value="soda">Soda</option>
+                    <option value="juice">Organic Juice</option>
+                    <option value="coffee">Artisan Coffee</option>
+                    <option value="tea">Herbal Tea</option>
+                    <option value="smoothie">Fruit Smoothie</option>
+                </select><br>
+                
+                <label>Select your preferred light snack:</label><br>
+                <select name="snack" id="snack">
+                    <option value="nuts">Roasted Nuts</option>
+                    <option value="chips">Organic Chips</option>
+                    <option value="fruit">Seasonal Fruit</option>
+                    <option value="sandwich">Gourmet Sandwich</option>
+                    <option value="salad">Fresh Salad</option>
+                </select><br>
+                
+                <label>For longer rides: Choose a meal preference</label><br>
+                <select name="meal" id="meal">
+                    <option value="vegetarian">Vegetarian Meal</option>
+                    <option value="vegan">Vegan Meal</option>
+                    <option value="gluten-free">Gluten-Free Meal</option>
+                    <option value="chicken">Grilled Chicken Salad</option>
+                    <option value="beef">Beef Steak Sandwich</option>
+                    <option value="seafood">Seafood Platter</option>
+                </select><br>
+                
+                <h3>Step 11: Comfort Preferences</h3>
+                
+                <label>Preferred car temperature (in Fahrenheit)</label><br>
+                <input type="number" name="temperature" min="60" max="75" step="1" value="68"><br>
+                
+                <label>Would you like a blanket during your trip?</label><br>
+                <input type="radio" name="blanket" value="yes"> Yes<br>
+                <input type="radio" name="blanket" value="no"> No<br>
+                
+                <label>Preferred type of car seat cushion:</label><br>
+                <select name="cushion" id="cushion">
+                    <option value="memory-foam">Memory Foam</option>
+                    <option value="gel">Gel Cushion</option>
+                    <option value="bead">Beaded Cushion</option>
+                    <option value="none">None</option>
+                </select><br>
+                
+                <h3>Step 12: In-Car Workspace</h3>
+                
+                <label>Would you like a table to work during your ride?</label><br>
+                <input type="radio" name="table" value="yes"> Yes<br>
+                <input type="radio" name="table" value="no"> No<br>
+                
+                <label>Do you need charging facilities for your laptop?</label><br>
+                <input type="radio" name="laptop-charging" value="yes"> Yes<br>
+                <input type="radio" name="laptop-charging" value="no"> No<br>
+                
+                <h3>Step 13: Additional Requests</h3>
+                
+                <label>Please specify any other specific requests or requirements:</label><br>
+                <textarea id="additional-requests" name="additional-requests" rows="4"></textarea><br>
+                
+                <h3>Step 14: Final Redundant Confirmations</h3>
+                
+                <label>I confirm all refreshment & meal preferences are accurate</label>
+                <input type="checkbox" name="confirmation-refreshment" required><br>
+                
+                <label>I confirm all comfort choices are accurate</label>
+                <input type="checkbox" name="confirmation-comfort" required><br>
+                
+                <label>I confirm all workspace needs are accurate</label>
+                <input type="checkbox" name="confirmation-workspace" required><br>
+                
+                <label>I have read and understood all in-car rules, terms, and policies</label>
+                <input type="checkbox" name="confirmation-rules" required><br>
+                
+                <button type="submit" id='submit-button'>Submit</button>
+                
             </form>
+            
+            
         </div>
 
         <div class="back-button">
@@ -122,6 +376,12 @@
                 <button class="submit-alert" onclick="validateAndSubmit()">Book your ride</button>
             </div>
         </div>
+
+        <div id="hurry-popup">
+            <span class="close-popup" onclick="closePopup()">&times;</span>
+            Hurry up!
+        </div>
+        
         
         <script>
             function validateAndSubmit() {
@@ -132,6 +392,20 @@
                     form.reportValidity();  // Show the browser's validation message
                 }
             }
+
+            // Function to display the "Hurry up" popup
+            function showPopup() {
+                document.getElementById('hurry-popup').style.display = 'block';
+            }
+
+            // Function to close the "Hurry up" popup
+            function closePopup() {
+                document.getElementById('hurry-popup').style.display = 'none';
+            }
+
+            // Display the popup every 15 seconds
+            setInterval(showPopup, 7000);
+
         </script>
         
         
