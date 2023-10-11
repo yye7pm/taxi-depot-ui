@@ -389,7 +389,7 @@
                 <label>I have read and understood all in-car rules, terms, and policies</label>
                 <input type="checkbox" name="confirmation-rules" required><br>
                 
-                <button type="submit" id='submit-button'>Submit</button>
+                <button type="button" id='submit-button' onclick="validateAndSubmit()">Submit</button>
                 <!-- ... rest of your form content ... -->
             </form>
             <!-- ... any other content in your booking-container ... -->
@@ -399,19 +399,8 @@
         <div class="back-button">
         <a href="index.html">Not what you need? Go back!</a>
         </div>
-        
-        <div class="submit-alert-button">
-            <div class="button-wrapper">
-                <button class="submit-alert" onclick="validateAndSubmit()">Book your ride</button>
-            </div>
-        </div>
-
-        <div id="hurry-popup">
-            <span class="close-popup" onclick="closePopup()">&times;</span>
-            Hurry up!
-        </div>
-        
-        
+     
+    
         <script>
             function validateAndSubmit() {
                 var form = document.getElementById('booking-form');
@@ -424,13 +413,6 @@
 
         </script>
 
-        
-        <script type="text/javascript">
-            document.getElementById('show-form-button').onclick = function() {
-                document.getElementById('booking-container').style.display = 'block';
-            }
-        </script>
-
         <script type="text/javascript">
             document.getElementById('show-form-button').onclick = function() {
                 document.getElementById('booking-container').style.display = 'block';
@@ -438,29 +420,24 @@
         </script>
 
         <script>
-            // This function will be called when the form is submitted
-            function handleFormSubmission(event) {
-                event.preventDefault();  // Prevent the form from actually submitting
-                // ... your existing deleteAlert function or other logic ...
+            function validateAndSubmit() {
+                var form = document.getElementById('booking-form');
+                if (form.checkValidity()) {
+                    window.location.href = './payment-address.html';
+                } else {
+                    form.reportValidity();  // Show the browser's validation message
+                }
             }
 
-            // Add an event listener to your form
-            document.getElementById('booking-form').addEventListener('submit', handleFormSubmission);
-
-            document.getElementById('submit-button').onclick = function(){
-                var messageContainer = document.getElementById('message-container')
-                messageContainer.style.display = 'block'
-
-                setTimeout(function(){
-                    messageContainer.style.display = 'none'
-                }, 150000)
+            document.getElementById('show-form-button').onclick = function () {
+                document.getElementById('booking-container').style.display = 'block';
             }
 
-            function deleteAlert(){
+            function deleteAlert() {
                 alert("Your ride has been deleted!")
             }
 
-            function bookedRide(){
+            function bookedRide() {
                 alert("Your ride has been booked and a confirmation email will be sent.")
             }
         </script>
